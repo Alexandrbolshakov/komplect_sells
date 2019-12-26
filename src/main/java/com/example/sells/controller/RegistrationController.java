@@ -1,8 +1,6 @@
 package com.example.sells.controller;
 
-import com.example.sells.domain.Role;
 import com.example.sells.domain.User;
-import com.example.sells.repos.UserRepo;
 import com.example.sells.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,14 +10,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Collections;
 import java.util.Map;
 
 @Controller
 public class RegistrationController {
 
-    @Autowired
-    UserService userService;
+    private final UserService userService;
+
+    public RegistrationController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/registration")
     public String registration(){

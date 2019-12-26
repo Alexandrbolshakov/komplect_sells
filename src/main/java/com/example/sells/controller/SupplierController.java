@@ -16,8 +16,11 @@ import java.util.Map;
 @Controller
 public class SupplierController {
 
-    @Autowired
-    SupplierRepo supplierRepo;
+    private final SupplierRepo supplierRepo;
+
+    public SupplierController(SupplierRepo supplierRepo) {
+        this.supplierRepo = supplierRepo;
+    }
 
     @GetMapping("/supplier")
     public String supplier(Map<String, Object> model){

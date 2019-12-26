@@ -23,14 +23,17 @@ import java.util.Map;
 @Controller
 public class MainController {
 
-    @Autowired
-    PartRepo partRepo;
+    private final PartRepo partRepo;
 
-    @Autowired
-    SupplierRepo supplierRepo;
+    private final SupplierRepo supplierRepo;
 
-    @Autowired
-    PartService partService;
+    private final PartService partService;
+
+    public MainController(PartRepo partRepo, SupplierRepo supplierRepo, PartService partService) {
+        this.partRepo = partRepo;
+        this.supplierRepo = supplierRepo;
+        this.partService = partService;
+    }
 
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
