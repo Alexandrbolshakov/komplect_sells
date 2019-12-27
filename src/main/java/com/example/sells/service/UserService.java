@@ -55,7 +55,7 @@ public class UserService implements UserDetailsService {
 
             String message = String.format(
                     "Hello, %s! \n" +
-                            "Welcome to Komplect. Please, visit next link http://localhost:8080/activate/%s",
+                            "Welcome to Komplect. Please, visit next link https://komplect.herokuapp.com/activate/%s",
                     user.getUsername(),
                     user.getActivationCode()
             );
