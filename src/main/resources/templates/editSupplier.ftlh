@@ -10,9 +10,9 @@
         <label for="email">Почта</label>
         <input type="email" name="email" value="${supplier.email}">
         <label for="contactName">Контактное лицо</label>
-        <input type="number" name="contactName" value="${supplier.contactName}">
+        <input type="text" name="contactName" value="${supplier.contactName}">
         <label for="indexStr">Коэффициент</label>
-        <input type="text" name="indexStr" value="${supplier.index!}">
+        <input type="text" name="indexStr" value="${supplier.index?c}">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <button type="submit">Сохранить</button>
     </form>

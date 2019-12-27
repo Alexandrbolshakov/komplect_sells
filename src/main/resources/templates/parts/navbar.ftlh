@@ -15,12 +15,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="/start">Parts list</a>
             </li>
-            <li class="nav-item">
+            <#if isAdmin><li class="nav-item">
                 <a class="nav-link" href="/addPart">Add part</a>
             </li>
+            </#if>
+            <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/supplier">Supplier list</a>
             </li>
+            </#if>
            <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/user">User list</a>

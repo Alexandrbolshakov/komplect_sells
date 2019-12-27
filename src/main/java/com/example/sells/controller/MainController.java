@@ -69,9 +69,10 @@ public class MainController {
                           @RequestParam String name,
                           @RequestParam String quantityStr,
                           @RequestParam String priceStr,
-                          @RequestParam(required = false, defaultValue = "") String supplier,
+                          @RequestParam(required = false, defaultValue = "", name = "supplier") String supplier,
                           @PageableDefault(sort = {"id"},direction = Sort.Direction.DESC)Pageable pageable
                           ){
+
         Supplier supplierFromDB = supplierRepo.findByName(supplier);
         if(supplierFromDB==null){
             model.put("message", "Поставщик не существует");
