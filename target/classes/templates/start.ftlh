@@ -42,7 +42,7 @@
                     <td>${part.quantity}</td>
                     <#if isAdmin><td>${part.price}</td></#if>
                     <td>${part.priceOut()}</td>
-                    <#if isAdmin><td><button><a href="/supplier">${part.supplierName}</a></button></td></#if>
+                    <#if isAdmin><td><button><a href="/editSupplier/${part.supplierId}">${part.supplierName}</a></button></td></#if>
                     <#if isAdmin><td>${part.dateTime!}</td></#if>
                     <#if isAdmin><td>
                         <button><a href="/edit/${part.id}">edit</a></button>

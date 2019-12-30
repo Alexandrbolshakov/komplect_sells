@@ -5,7 +5,6 @@ import com.example.sells.domain.Supplier;
 import com.example.sells.repos.PartRepo;
 import com.example.sells.repos.SupplierRepo;
 import com.example.sells.service.PartService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

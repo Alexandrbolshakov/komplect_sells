@@ -1,16 +1,13 @@
 package com.example.sells.controller;
 
-import com.example.sells.domain.Part;
 import com.example.sells.domain.Supplier;
 import com.example.sells.repos.SupplierRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDateTime;
 import java.util.Map;
 
 @Controller

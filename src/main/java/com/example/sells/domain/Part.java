@@ -45,7 +45,9 @@ public class Part {
         return supplier!=null ? supplier.getName() : "<none>";
     }
 
-
+    public Long getSupplierId(){
+        return supplier.getId();
+    }
     public LocalDate getDateTime() {
         return dateTime;
     }
