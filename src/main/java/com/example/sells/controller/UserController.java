@@ -3,7 +3,6 @@ package com.example.sells.controller;
 import com.example.sells.domain.Role;
 import com.example.sells.domain.User;
 import com.example.sells.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
