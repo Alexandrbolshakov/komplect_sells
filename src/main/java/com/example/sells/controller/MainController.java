@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -59,6 +60,8 @@ public class MainController {
 
     @GetMapping("/addPart")
     public String addPartPage(Map<String, Object>model){
+        Iterable<Supplier> suppliers = supplierRepo.findAll();
+        model.put("suppliers", suppliers);
         return "addPart";
     }
 
@@ -71,8 +74,7 @@ public class MainController {
                           @RequestParam(required = false, defaultValue = "", name = "supplier") String supplier,
                           @PageableDefault(sort = {"id"},direction = Sort.Direction.DESC)Pageable pageable
                           ){
-
-        Supplier supplierFromDB = supplierRepo.findByName(supplier);
+         Supplier supplierFromDB = supplierRepo.findByName(supplier);
         if(supplierFromDB==null){
             model.put("message", "Поставщик не существует");
             return "addPart";

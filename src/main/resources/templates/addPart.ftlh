@@ -27,14 +27,19 @@
                 <label>
                     <select class="custom-select" name="supplier">
                         <option selected>Поставщик</option>
-                        <option value="Лонмади">Лонмади</option>
-                        <option value="Актио">Актио</option>
+                        <#list suppliers as supplier>
+                            <option selected>${supplier.name}</option>
+                        </#list>
                     </select>
                 </label>
+
+
+
             </div>
              <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit">Добавить</button>
         </form>
     </div>
     ${message!}
+
 </@c.page>
