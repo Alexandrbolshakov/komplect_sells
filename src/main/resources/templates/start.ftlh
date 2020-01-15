@@ -19,7 +19,7 @@
             <button type="submit">Найти</button>
         </form>
         </div>
-    <@p.pager url page/>
+    <@p.pager url page />
     <div>
         <table border="1">
             <thead>
@@ -53,6 +53,6 @@
             </tbody>
         </table>
     </div>
-    <@p.pager url page/>
+    <@p.pager url page />
     ${message!}
 </@c.page>

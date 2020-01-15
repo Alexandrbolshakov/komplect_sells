@@ -2,8 +2,7 @@
     <#if page.getTotalPages() gt 7>
         <#assign
             totalPages = page.getTotalPages()
-            
-            pageNumber = page.getPageNumber() + 1
+            pageNumber = page.getNumber() + 1
 
             head = (pageNumber >4)?then([1, -1],[1,2,3])
             tail = (pageNumber < totalPages - 3)?then([-1, totalPages], [totalPages-2, totalPages-1, totalPages])
