@@ -84,8 +84,7 @@ public class MainController {
         Part part = new Part(partNumber,name,quantity,price,supplierFromDB, LocalDateTime.now().toLocalDate());
         partRepo.save(part);
         Iterable<Part> parts = partRepo.findAll();
-        Page page = partRepo.findAll(pageable);
-
+        Page<Part> page=partRepo.findAll(pageable);
         model.put("parts", parts);
         model.put("url", "/start");
         model.put("page", page);

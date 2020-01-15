@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface PartRepo extends CrudRepository<Part, Long> {
-    Page findAll(Pageable pageable);
+    Page<Part> findAll(Pageable pageable);
     Page<Part> findByPartNumber(String number, Pageable pageable);
 }
