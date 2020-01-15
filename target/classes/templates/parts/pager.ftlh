@@ -2,6 +2,7 @@
     <#if page.getTotalPages() gt 7>
         <#assign
             totalPages = page.getTotalPages()
+            
             pageNumber = page.getPageNumber() + 1
 
             head = (pageNumber >4)?then([1, -1],[1,2,3])
